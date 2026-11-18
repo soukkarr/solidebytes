@@ -227,5 +227,5 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
     el.style.transitionDelay = `${(i % 4) * 70}ms`;
     io.observe(el);
   });
-  $('#year').textContent = new Date().getFullYear();
+  $$('.yr').forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
