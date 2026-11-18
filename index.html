@@ -7,7 +7,8 @@
   <meta name="description" content="SolideBytes is an independent studio that designs and builds mobile apps and games.">
   <meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='%232B59F0'/%3E%3Crect x='9' y='9' width='6' height='6' rx='1.5' fill='%23fff'/%3E%3Crect x='17' y='17' width='6' height='6' rx='1.5' fill='%23FFB020'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="apple-touch-icon" href="logo.svg">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -17,7 +18,54 @@
   <!-- ───────── Navigation ───────── -->
   <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="SolideBytes, back to top">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">  <!-- "Bit" — the SolideBytes mascot: a liquid-chrome byte with eyes -->
+  <defs>
+    <linearGradient id="sbTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#DDE2E9"/>
+      <stop offset="1" stop-color="#A9B1BC"/>
+    </linearGradient>
+    <linearGradient id="sbLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2F5F8"/>
+      <stop offset=".42" stop-color="#AEB5BF"/>
+      <stop offset=".5" stop-color="#3E444D"/>
+      <stop offset=".72" stop-color="#7D8590"/>
+      <stop offset="1" stop-color="#E4E8ED"/>
+    </linearGradient>
+    <linearGradient id="sbRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C7CDD5"/>
+      <stop offset=".38" stop-color="#7A818C"/>
+      <stop offset=".46" stop-color="#22262C"/>
+      <stop offset=".7" stop-color="#4F5660"/>
+      <stop offset="1" stop-color="#A3AAB4"/>
+    </linearGradient>
+    <radialGradient id="sbShadow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#000" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="32" cy="60" rx="20" ry="3.2" fill="url(#sbShadow)"/>
+  <g stroke-linejoin="round" stroke-width="2.4">
+    <path d="M32 5 L56 19 L32 33 L8 19 Z" fill="url(#sbTop)" stroke="url(#sbTop)"/>
+    <path d="M8 19 L32 33 L32 58 L8 44 Z" fill="url(#sbLeft)" stroke="url(#sbLeft)"/>
+    <path d="M32 33 L56 19 L56 44 L32 58 Z" fill="url(#sbRight)" stroke="url(#sbRight)"/>
+  </g>
+  <!-- rim light along the edges -->
+  <path d="M8 19 L32 33 L56 19 M32 33 L32 58" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1" stroke-linecap="round"/>
+  <clipPath id="sbTopClip"><path d="M32 5 L56 19 L32 33 L8 19 Z"/></clipPath>
+  <ellipse cx="28" cy="15" rx="8" ry="2.4" fill="#fff" opacity=".8" transform="rotate(30 28 15)" clip-path="url(#sbTopClip)"/>
+  <!-- eyes -->
+  <g class="sb-eyes">
+    <g transform="translate(24 40) skewY(30)">
+      <ellipse rx="3.1" ry="4.4" fill="#0D0F14"/>
+      <circle cx="1" cy="-1.8" r="1.2" fill="#fff"/>
+    </g>
+    <g transform="translate(40 40) skewY(-30)">
+      <ellipse rx="3.1" ry="4.4" fill="#0D0F14"/>
+      <circle cx="1" cy="-1.8" r="1.2" fill="#fff"/>
+    </g>
+  </g>
+</svg>
       <span class="brand-name">solide<b>bytes</b></span>
     </a>
     <nav aria-label="Main">

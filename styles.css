@@ -120,12 +120,10 @@ button { font: inherit; color: inherit; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
 .brand-name { font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.02em; }
 .brand-name b { font-weight: 800; }
-.brand-mark { display: grid; grid-template-columns: repeat(2, 9px); gap: 3px; }
-.brand-mark i { width: 9px; height: 9px; border-radius: 2.5px; background: var(--b1); }
-.brand-mark i:nth-child(2) { background: var(--b2); }
-.brand-mark i:nth-child(3) { background: var(--b3); }
-.brand-mark i:nth-child(4) { background: var(--b4); transition: transform .4s var(--spring); }
-.brand:hover .brand-mark i:nth-child(4) { transform: translate(3px, 3px) rotate(12deg); }
+.brand-mark { width: 34px; height: 34px; overflow: visible; transition: transform .45s var(--spring); }
+.brand:hover .brand-mark { transform: translateY(-3px) rotate(-6deg); }
+.sb-eyes { transform-box: fill-box; transform-origin: center; animation: sb-blink 5s infinite; }
+@keyframes sb-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
 .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .nav ul a {
   display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px;
